@@ -1,0 +1,16 @@
+{
+  "name": "simpeexpressproject",
+  "version": "1.3.1",
+  "description": "this is the description of project. we are learning express with npm ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vineeta",
+  "license": "TEST",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {}
+}
