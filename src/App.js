@@ -1,7 +1,8 @@
 import './App.css';
-import Home from "./Home";
+import Login from "./Login";
 import Contact from './Contact';
 import Detail from './Detail';
+import Counter from './Counter';
 import {BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
   </div>
   <hr/>
   <Switch>
-    <Route exact path ="/"><Home/></Route>
+    <Route exact path ="/"><Login/></Route>
     <Route path ="/contacts"><Contact/></Route>
     <Route path ="/details"><Detail/></Route>
   </Switch>

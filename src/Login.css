@@ -1,0 +1,6 @@
+.login {
+    text-align: center;
+}
+.login > input {
+    padding-left:10px;
+}

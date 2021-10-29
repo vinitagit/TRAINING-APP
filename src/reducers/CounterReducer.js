@@ -22,6 +22,18 @@ if (action.type === 'RESET') {
                     count: 0,
                 };
             }
+if( action.type == "loginSuccess"){
+                return{
+                    ...state,
+                    loginSuccess: true
+                };
+            }
+if( action.type == "loginFail"){
+                return{
+                    ...state,
+                    loginSuccess: false
+                };
+            }
     
 }
 

@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './store';
 import {Provider} from 'react-redux';
+import axios from "axios";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,11 +17,12 @@ ReactDOM.render(
 );
 
 // below will be triggered whenever there is a cange in state, it will act as effect
-store.subscribe(()=> {
+/*store.subscribe(()=> {
   console.log('storage changed');
   console.log(store.getState());
   alert(store.getState().count);
-});
+});*/
+
 
 //store.subscribe(render);
 
