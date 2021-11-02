@@ -1,4 +1,10 @@
+import Clothing from "./assets/Clothing.json";
+
 function Contact(){
-    return <h1> In MY Contact !!</h1>;
+    return (
+        <div>
+            {Clothing.map((cloth)=><ul><li>{cloth.name}<button>Add</button></li></ul>)}
+        </div>
+    )
     }
     export default Contact;

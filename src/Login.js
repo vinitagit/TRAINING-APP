@@ -13,7 +13,7 @@ function Login(){
 
         axios.post("/login",{username:username1, password: password1}).then((res)=>{
            store.dispatch({type:"loginSuccess"});
-           history.push("/contacts");
+           history.push("/home");
 
         }).catch((err)=>{
             store.dispatch({type:"loginFail"});
