@@ -5,7 +5,7 @@ let initialState = {
 function CounterReducer(state=initialState, action) {
     if (action.type === 'INCREMENT') {
         return {
-            ...state,
+            ...state.count,
             count: state.count +1,
         };
     }
