@@ -2,18 +2,23 @@
 import Clothing from "./../assets/Clothing.json";
 import Header from "./Header";
 import store from "./../store";
+import {connect} from "react-redux";
+import Contact from './../Contact'
 
-function WomenClothing(){
-  let countVal;
-  const Increase=()=>{
-    store.dispatch({type: 'INCREMENT'});
+const WomenClothing =({WomenClothing})=>{
+ return (
+   <div>
+     {WomenClothing.map((cloth)=>(
+     <Contact/>
+     ))}
+   </div>
+ );
 };
-    return (
-<div>
-          <Header className="header" headerName="Women Apparel" />
-            {Clothing.map((cloth)=><ul><li key={cloth.id}>{cloth.name}{" "}<button onClick={Increase}>Add</button></li></ul>)}
-        </div>
-    )
-}
 
-export default WomenClothing;
+const mapStateToProps = (state)=> {
+  return {
+    WomenClothing : state.shop.womenClothing,
+  };
+};
+
+export default connect(mapStateToProps)(WomenClothing);

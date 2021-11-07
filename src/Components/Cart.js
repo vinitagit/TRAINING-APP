@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import React, {Component} from 'react';
 function Cart(props){
 
-    return (<div>Cart: {props.count}
+    return (<div>Your Cart: [ {props.count} <i className="material-icons">shopping_cart</i>]
 
     </div>
     );
