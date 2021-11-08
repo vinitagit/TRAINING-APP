@@ -2,23 +2,18 @@
 import Clothing from "./../assets/Clothing.json";
 import Header from "./Header";
 import store from "./../store";
-import {connect} from "react-redux";
-import Contact from './../Contact'
 
-const WomenClothing =({WomenClothing})=>{
- return (
-   <div>
-     {WomenClothing.map((cloth)=>(
-     <Contact/>
-     ))}
-   </div>
- );
+
+const WomenClothing =()=>{
+  const Increase=()=>{
+    store.dispatch({type: 'INCREMENT'});
 };
+    return (
+<div>
+          <Header className="header" headerName="Women Apparel" />
+            {Clothing.map((cloth)=><ul><li key={cloth.key}>{cloth.name}{" "}<button onClick={Increase}>Add</button></li></ul>)}
+        </div>
+    )
+}
 
-const mapStateToProps = (state)=> {
-  return {
-    WomenClothing : state.shop.womenClothing,
-  };
-};
-
-export default connect(mapStateToProps)(WomenClothing);
+export default WomenClothing;

@@ -1,26 +1,31 @@
 [
 {
-    "id": "1",
-    "name": "Tops"
+    "key": "1",
+    "name": "Tops",
+    "price": "10$"
   },
   {
-    "id": "2",
-    "name": "Pants"
+    "key": "2",
+    "name": "Pants",
+    "price": "20$"
   
   },
   {
-    "id": "3",
-    "name": "Shirts"
+    "key": "3",
+    "name": "Shirts",
+    "price": "15$"
   
   },
   {
-    "id": "4",
-    "name": "Dresses"
+    "key": "4",
+    "name": "Dress",
+    "price": "35$"
   
   },
   {
-    "id": "5",
-    "name": "footwear"
+    "key": "5",
+    "name": "footwear",
+    "price": "10$"
   
   }
 ]

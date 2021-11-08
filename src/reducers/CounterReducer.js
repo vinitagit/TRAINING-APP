@@ -1,38 +1,26 @@
 let initialState = {
-    count : 0
+    count : 0,
+    loginSuccess: false,
 }
 
 function CounterReducer(state=initialState, action) {
-    if (action.type === 'INCREMENT') {
-        return {
-            ...state.count,
-            count: state.count +1,
-        };
-    }
-
-if (action.type === 'DECREMENT') {
-            return {
-                ...state,
-                count: state.count - 1,
-            };
-        }
-if (action.type === 'RESET') {
-                return {
-                    ...state,
-                    count: 0,
-                };
-            }
-if( action.type == "loginSuccess"){
+            switch(action.type){
+                case 'INCREMENT':
+                    return {
+                        ...state.count,
+                        count: state.count +1,
+                    };
+                case "loginSuccess": 
                 return{
                     ...state,
                     loginSuccess: true
                 };
-            }
-if( action.type == "loginFail"){
+                case "loginFail": 
                 return{
                     ...state,
                     loginSuccess: false
                 };
+                default: return state
             }
     
 }

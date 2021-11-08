@@ -11,7 +11,7 @@ function MenClothing(){
     return (
 <div>
           <Header className="header" headerName="Men Apparel" />
-            {Clothing.map((cloth)=><ul><li key={cloth.id}>{cloth.name}{" "}<button onClick={Increase}>Add</button></li></ul>)}
+            {Clothing.map((cloth)=><ul><li key={cloth.key}>{cloth.name}{" "}<button onClick={Increase}>Add</button></li></ul>)}
         </div>
     )
 }

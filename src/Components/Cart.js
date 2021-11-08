@@ -1,20 +1,27 @@
 import store from "./../store";
 import {connect} from "react-redux";
 import React, {Component} from 'react';
-function Cart(props){
+import {useState , useEffect} from "react";
+const Cart =({cart})=>{
+    const [cartCount, setCartCount]= useState(0);
+    useEffect(()=>{
+        let count = 0;
+        cart.forEach(item => {
+            count += item.qty;
+        });
+        setCartCount(count);
 
-    return (<div>Your Cart: [ {props.count} <i className="material-icons">shopping_cart</i>]
+    }, [cart, cartCount])
+
+    return (<div>Your Cart: [ {cartCount} ]
 
     </div>
     );
 }
-const mapStateToProps = function(state){
+const mapStateToProps = (state)=>{
     console.log(state);
-    return state;
+    return {
+        cart: state.shop.cart
+    }
 }
-
-
-const NewReduxClassBasedCounter = connect(
-    mapStateToProps,
-)(Cart);
-export default NewReduxClassBasedCounter;
+export default connect(mapStateToProps)(Cart);
