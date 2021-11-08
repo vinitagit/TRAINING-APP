@@ -3,15 +3,12 @@ import Clothing from "./../assets/Clothing.json";
 import Header from "./Header";
 import store from "./../store";
 
+function WomenClothing(){
 
-const WomenClothing =()=>{
-  const Increase=()=>{
-    store.dispatch({type: 'INCREMENT'});
-};
     return (
-<div>
+       <div>
           <Header className="header" headerName="Women Apparel" />
-            {Clothing.map((cloth)=><ul><li key={cloth.key}>{cloth.name}{" "}<button onClick={Increase}>Add</button></li></ul>)}
+            {Clothing.map((cloth)=><ul><li key={cloth.id}>{cloth.name}{" "}<button>Add to cart</button></li></ul>)}
         </div>
     )
 }
