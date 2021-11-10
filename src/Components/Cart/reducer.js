@@ -10,7 +10,18 @@ const initialState = {
 const CartReducer = (state = initialState, action)=>{
 
     switch(action.type) {
-        case actionTypes.ADD_TO_CART: return {}
+        case actionTypes.ADD_TO_CART: 
+        // Get the item data from the WomenClothing array
+        const item = state.womenClothing.find((cloth)=>cloth.key=== action.payload.id);
+
+        // whether the item is there in cart
+        const inCart = state.cart.find((item)=>item.key === action.payload.id ? true: false);
+        return {
+            ...state,
+            cart: inCart ? 
+            state.cart.map((item)=> item.key === action.payload.id ? {...item, qty: item.qty +1}: item ):
+            [...state.cart,{...item, qty: 1}],
+        }
         default: return state
     }
 }

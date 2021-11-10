@@ -1,16 +1,26 @@
-
-import Clothing from "./../assets/Clothing.json";
 import Header from "./Header";
 import store from "./../store";
+import {connect} from "react-redux";
+import Product from "./Product";
+import Cart from "./Cart";
 
-function WomenClothing(){
+function WomenClothing({womenClothing}){
 
     return (
        <div>
           <Header className="header" headerName="Women Apparel" />
-            {Clothing.map((cloth)=><ul><li key={cloth.id}>{cloth.name}{" "}<button>Add to cart</button></li></ul>)}
+          <Cart/>
+            {womenClothing.map((cloth)=>
+            <Product productData={cloth}/>)}
         </div>
     )
 }
 
-export default WomenClothing;
+
+const mapStateToProps = (state)=>{
+    return {
+        womenClothing : state.shop.womenClothing
+    };
+};
+
+export default connect(mapStateToProps)(WomenClothing);
