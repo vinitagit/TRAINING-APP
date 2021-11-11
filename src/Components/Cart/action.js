@@ -8,3 +8,11 @@ export const addToCart = (itemId)=>{
         }
     }
 }
+export const removeFromCart = (itemId)=>{
+    return {
+        type: actionTypes.REMOVE_FROM_CART,
+        payload: {
+            id: itemId
+        }
+    }
+}

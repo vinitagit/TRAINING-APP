@@ -11,8 +11,8 @@ const Cart=({cart})=> {
         setCartCount(count);
     },[cart, cartCount])
     return (
-        <div>
-            Your cart: [{cartCount}]
+        <div style={{float:"right", marginRight:"37px", fontSize:"20px"}}>
+          <div>{cartCount}</div>
         </div>
     )
 }

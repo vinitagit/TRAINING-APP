@@ -1,0 +1,13 @@
+.cartProductDisplay {
+    display: grid;
+    width: 200px;
+    height: 100px;
+    border-block-color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    margin-bottom:20px;
+}
+.remove {
+    margin-top:5px;
+    display: block;
+}
