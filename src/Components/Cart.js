@@ -11,7 +11,7 @@ const Cart=({cart})=> {
         setCartCount(count);
     },[cart, cartCount])
     return (
-        <div style={{float:"right", marginRight:"37px", fontSize:"20px"}}>
+        <div className="cartClass" style={{float:"right", marginRight:"37px", fontSize:"20px"}}>
           <div>{cartCount}</div>
         </div>
     )
