@@ -2,30 +2,35 @@
 {
     "key": "1",
     "name": "Tops",
-    "price": "10$"
+    "description": "Pink trendy top",
+    "price": "1000"
   },
   {
     "key": "2",
-    "name": "Pants",
-    "price": "20$"
+    "name": "Pant",
+    "description": "Raymond pant blue color",
+    "price": "600"
   
   },
   {
     "key": "3",
-    "name": "Shirts",
-    "price": "15$"
+    "name": "Shirt",
+    "description": "Grey relaxing t-shirt",
+    "price": "800"
   
   },
   {
     "key": "4",
     "name": "Dress",
-    "price": "35$"
+    "description": "Trendy yellow dress from AND",
+    "price": "1500"
   
   },
   {
     "key": "5",
     "name": "footwear",
-    "price": "10$"
+    "description": "Platform heels from hotecurry",
+    "price": "900"
   
   }
 ]
