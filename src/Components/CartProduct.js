@@ -12,35 +12,28 @@ function CartProduct(props) {
     return (
         <div className="cartProductDisplay">
             {<ul className="cartProductUl"><li className="cartProductLi" key={keyValue.toString()}>
-            <table width="70%" style={{marginLeft:"20px"}}>
+            <table width="80%">
                 <thead><tr>
                     <th>  
                     {props.productData.name}
                     </th>
-                    <th>
+                    <th style={{width:"220px", whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis"}}>
                     {props.productData.description}
                     </th>
                     <th>
-                    {props.productData.qty}
+                    {props.productData.qty} {" "}{'X'}
                     </th>
                     <th>
-                       X
-                    </th>
-                    <th>
-                    Rs{props.productData.price}
-                    </th>
-                    <th>
-                       =
+                    Rs{props.productData.price} {'='}
                     </th>
                     <th>
                     {qty * price} 
                     </th>
-                    <th>
-                    <button style={{marginLeft:"7px", borderWidth:"0px", padding: "0px"}} onClick={()=>removeFromCart(props.productData.key)}><img style={{height:"20px", width:"20px"}}src={props.img}/></button>
-                    </th>
+  
         </tr></thead>
         <tbody></tbody>
       </table>
+      <button style={{marginLeft:"7px", borderWidth:"0px", padding: "0px", float:"right", marginRight:"20px"}} onClick={()=>removeFromCart(props.productData.key)}><img style={{height:"20px", width:"20px"}}src={props.img}/></button>
                </li></ul>}
         </div>
     )

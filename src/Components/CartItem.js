@@ -20,9 +20,9 @@ const CartItem =({cartValue})=>{
     },[cartValue,totalPrice,totalItems ])
     return (
         <div>
-            <Header className="header" headerName="Cart" isCartPresent={false}/>
+            <Header className="header" headerName="Shopify" headerName1="Women Apparel" headerName2="Cart" isCartPresent={false}/>
             <div className="productTable" style={{float:"left"}}>
-            <table style={{marginTop:"20px"}} width="60%">
+            <table style={{marginTop:"20px"}} width="80%">
                 <thead><tr>
                     <th>  
                         Item

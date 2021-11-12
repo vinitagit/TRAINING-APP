@@ -28,6 +28,11 @@ const CartReducer = (state = initialState, action)=>{
                 ...state,
                 cart: state.cart.filter((item)=>item.key !== action.payload.id)
             }
+        case actionTypes.CHANGE_QUANTITY:
+            return {
+                ...state,
+                cart: state.cart.map((item)=>item.id === action.payload.id ? {...item,qty: action.payload.qty}: item )
+            }
         default: return state
     }
 }

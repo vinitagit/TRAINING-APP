@@ -8,7 +8,7 @@ function WomenClothing({womenClothing}){
 
     return (
        <div>
-          <Header className="header" headerName="Women Apparel" isCartPresent={true}/>
+          <Header className="header" headerName="Shopify" headerName1="Women Apparel" isCartPresent={true}/>
             {womenClothing.map((cloth)=>
             <Product productData={cloth}/>)}
         </div>

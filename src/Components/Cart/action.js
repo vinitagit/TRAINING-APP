@@ -16,3 +16,12 @@ export const removeFromCart = (itemId)=>{
         }
     }
 }
+export const changeQuantity = (itemId, value)=>{
+    return {
+        type: actionTypes.CHANGE_QUANTITY,
+        payload: {
+            id: itemId,
+            qty: value
+        }
+    }
+}
