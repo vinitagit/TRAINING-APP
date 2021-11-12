@@ -9,7 +9,7 @@ function Homepage(){
     <div>
         <Header className="header" headerName="Shopify" isCartPresent={false}/>
     <div style={{height: "650px"}}>
-        <div
+        <div 
             style={{backgroundImage: `url(${ShopWomen})`, backgroundRepeat:"no-repeat", backgroundSize:"cover", backgroundPosition:"center", float:"left", height: "100%", width:"50%"}}>
                 <Link className="linkClass" to="/womenApparel">Shop Womens</Link>
         </div>

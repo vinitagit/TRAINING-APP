@@ -8,7 +8,7 @@ function Product(props) {
     const keyValue = props.productData.key;
     return (
         <div className="productDisplay">
-            {<ul><li key={keyValue.toString()}>{props.productData.name}{" "}{props.productData.price}<button className="add" onClick={()=>addToCart(props.productData.key)}>Add to cart</button></li></ul>}
+            {<ul className="productUl"><li className="productLi" key={keyValue.toString()}>{props.productData.name}{" "} Rs{props.productData.price}<button className="add" onClick={()=>addToCart(props.productData.key)}>Add to cart</button></li></ul>}
         </div>
     )
 }
