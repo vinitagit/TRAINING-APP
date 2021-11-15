@@ -1,14 +1,23 @@
 import store from "../store";
 import "./CartProduct.css";
+import {useState} from "react";
 
 function CartProduct(props) {
+    const[qtyValue, setQtyValue] = useState(props.productData.qty);
 
     const removeFromCart=(idValue)=>{
         store.dispatch({type:'REMOVE_FROM_CART', payload:{id: idValue}});
     }
+    const onChangeHandler = (e) => {
+        console.log('event value '+ e.target.value);
+        setQtyValue(e.target.value);
+        store.dispatch({type:'ADJUST_QUANTITY', payload:{id: props.productData.key, qty: e.target.value}});
+    }
+
     const keyValue = props.productData.key;
     const qty = props.productData.qty;
     const price = props.productData.price;
+
     return (
         <div className="cartProductDisplay">
             {<ul className="cartProductUl"><li className="cartProductLi" key={keyValue.toString()}>
@@ -21,7 +30,9 @@ function CartProduct(props) {
                     {props.productData.description}
                     </th>
                     <th>
-                    {props.productData.qty} {" "}{'X'}
+                    <label htmlFor="qty">Qty</label>
+                    <input style={{width:"30px"}} min = "1"  type = "number" id="qty" name = "qty" value={qtyValue}
+                      onChange={onChangeHandler}/> {" "}{'X'}
                     </th>
                     <th>
                     Rs{props.productData.price} {'='}

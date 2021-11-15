@@ -16,9 +16,9 @@ export const removeFromCart = (itemId)=>{
         }
     }
 }
-export const changeQuantity = (itemId, value)=>{
+export const adjustQuantity = (itemId, value)=>{
     return {
-        type: actionTypes.CHANGE_QUANTITY,
+        type: actionTypes.ADJUST_QUANTITY,
         payload: {
             id: itemId,
             qty: value

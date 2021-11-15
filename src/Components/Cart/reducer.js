@@ -3,12 +3,12 @@ import Clothing from "./../../assets/Clothing.json"
 
 const initialState = {
     womenClothing: Clothing, // {key, name, price}
-    cart:[], // {key,name, price, qty}
+    cart:[], // {key,name, price, qty} 
 }
 
 
 const CartReducer = (state = initialState, action)=>{
-
+console.log('IN reducers');
     switch(action.type) {
         case actionTypes.ADD_TO_CART: 
         // Get the item data from the WomenClothing array
@@ -28,10 +28,11 @@ const CartReducer = (state = initialState, action)=>{
                 ...state,
                 cart: state.cart.filter((item)=>item.key !== action.payload.id)
             }
-        case actionTypes.CHANGE_QUANTITY:
+        case actionTypes.ADJUST_QUANTITY:
+            console.log('true? '+ action.payload.id);
             return {
                 ...state,
-                cart: state.cart.map((item)=>item.id === action.payload.id ? {...item,qty: action.payload.qty}: item )
+                cart: state.cart.map((item)=>item.key === action.payload.id ? {...item,qty: +action.payload.qty}: item )
             }
         default: return state
     }
